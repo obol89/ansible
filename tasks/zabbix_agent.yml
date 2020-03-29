@@ -41,6 +41,8 @@
         owner: root
         group: root
         mode: 0644
+      notify:
+        - restart zabbix-agent
 
     - name: "Start and enable zabbix-agent.service"
       service:
