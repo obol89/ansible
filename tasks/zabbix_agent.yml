@@ -2,8 +2,12 @@
 
 - name: Installing and configuring zabbix-agent
   hosts: all
+  handlers:
+    - name: restart zabbix-agent
+      service:
+        name: zabbix-agent
+        state: restarted
   tasks:
-
     - stat:
         path: "/etc/yum.repos.d/zabbix.repo"
       register: zabbix_repo
