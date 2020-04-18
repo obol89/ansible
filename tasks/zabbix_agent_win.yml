@@ -1,0 +1,10 @@
+---
+
+- name: Installing and configuring zabbix-agent
+  hosts: all
+
+  tasks:
+    - name: Install zabbix agent
+      win_package:
+        path: https://www.zabbix.com/downloads/4.0.17/zabbix_agent-4.0.17-windows-amd64-openssl.msi
+        state: present
