@@ -3,4 +3,4 @@
 - name: Installing zabbix agent on Windows with dj-wasabi role
   hosts: windows7_servers
   roles:
-    - role: dj-wasabi.zabbix-agent
+    - dj-wasabi.zabbix-agent
