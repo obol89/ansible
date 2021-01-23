@@ -8,6 +8,8 @@
         name: zabbix-agent
         state: restarted
   tasks:
+    - name: get service facts
+      service_facts:
     - stat:
         path: "/etc/yum.repos.d/zabbix.repo"
       register: zabbix_repo

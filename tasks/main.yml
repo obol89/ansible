@@ -1,0 +1,7 @@
+---
+- name: Check if Zabbix Agent is installed
+  package_facts:
+    manager: auto
+
+- include: install/{{ ansible_os_family }}.yml
+  when: "'zabbix_agent' not in ansible_facts.packages"
