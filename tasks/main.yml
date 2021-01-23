@@ -1,7 +1,10 @@
 ---
-- name: Check if Zabbix Agent is installed
-  package_facts:
-    manager: auto
+- name: something
+  hosts: 10.70.70.10, 10.70.70.143
+  tasks:
+          - name: "Check if Zabbix Agent is installed"
+            package_facts:
+                    manager: auto
 
-- include: install/{{ ansible_os_family }}.yml
-  when: "'zabbix_agent' not in ansible_facts.packages"
+          - include: install/{{ ansible_os_family }}.yml
+            when: "'zabbix_agent' not in ansible_facts.packages"
