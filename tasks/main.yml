@@ -1,6 +1,6 @@
 ---
 - name: something
-  hosts: 10.70.70.10, 10.70.70.143
+  hosts: fs_dc
   tasks:
           - name: "Check if Zabbix Agent is installed"
             package_facts:
